@@ -18,7 +18,7 @@ OBJ_DIR		:=	obj
 INC_DIR		:=	include
 
 #CFLAGS		:=	-Wextra -Wall -Werror -g
-CFLAGS		:=	-g
+#CFLAGS		:=	-g
 CFLAGS		+=	-I$(INC_DIR)
 
 LDFLAGS		:=	-Llib/my/ -lmy
@@ -52,7 +52,7 @@ $(OBJ_DIR)/%.o:		$(SRC_DIR)/%.c
 all:			$(NAME)
 
 
-$(NAME): 		$(OBJ2) $(OBJ)
+$(NAME): 		$(OBJ)
 			$(CC) -o $(NAME) $(OBJ) $(LDFLAGS)
 
 clean:
